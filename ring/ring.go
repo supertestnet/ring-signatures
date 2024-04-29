@@ -29,6 +29,7 @@ var (
 // The private key should be safely stored.
 // The public key can be shared with anyone.
 func Generate(rand io.Reader) (PublicKey, PrivateKey) {
+	fmt.println( "hello world 1" )
 	if rand == nil {
 		rand = crand.Reader
 	}
@@ -72,7 +73,7 @@ func (sk PrivateKey) Sign(
 	ringKeys []PublicKey,
 	signerIndex int,
 ) (*Signature, error) {
-	fmt.println( "hello world" )
+	fmt.println( "hello world 2" )
 	if len(message) == 0 {
 		return nil, ErrEmptyMessage
 	}
