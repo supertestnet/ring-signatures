@@ -72,6 +72,7 @@ func (sk PrivateKey) Sign(
 	ringKeys []PublicKey,
 	signerIndex int,
 ) (*Signature, error) {
+	fmt.println( "hello world" )
 	if len(message) == 0 {
 		return nil, ErrEmptyMessage
 	}
